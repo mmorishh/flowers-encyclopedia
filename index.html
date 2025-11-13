@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Энциклопедия цветов</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script .js" defer></script>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Логотип CSS -->
+                <div class="logo">
+                    <div class="logo-flower">
+                        <div class="petal"></div>
+                        <div class="petal"></div>
+                        <div class="petal"></div>
+                        <div class="petal"></div>
+                        <div class="flower-center"></div>
+                    </div>
+                </div>
+                
+                <h1 class="site-title">Энциклопедия цветов</h1>
+                <nav class="menu">
+                    <a href="index.html" class="menu-link">Главная</a>
+                    <a href="#about" class="menu-link">Об авторе</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный баннер -->
+    <section class="hero">
+        <div class="hero-image">
+            <h2 class="hero-title">Мир прекрасных цветов</h2>
+        </div>
+    </section>
+
+     <!-- Вступительный текст -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2 class="intro-title">Очарование цветочного мира</h2>
+                <div class="intro-text">
+                    <p>Цветы — это удивительные творения природы, которые сопровождают нас на протяжении всей жизни. Они дарят нам радость, вдохновение и красоту в каждом своем лепестке. С древних времен цветы символизировали любовь, нежность и восхищение, становясь языком чувств, который понятен без слов.</p>
+                    
+                    <p>В нашей энциклопедии вы найдете информацию о самых прекрасных и популярных цветах, узнаете об их особенностях, сезонах цветения и символическом значении. От нежных роз до ярких георгин — каждый цветок имеет свою уникальную историю и характер.</p>
+                    
+                    <p>Откройте для себя магию цветочного мира и найдите свой любимый цветок среди нашего разнообразия!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" id="flowerSearch" class="search-input" 
+                       placeholder="Начните вводить название цветка...">
+                <div class="search-icon">🔍</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея цветов -->
+    <main class="main">
+        <div class="container">
+            <h2 class="section-title">Коллекция цветов</h2>
+            <div class="flowers-grid">
+                <div class="flower-card" id="georgina">
+                    <a href="flowers/георгина.html#georgina" class="flower-link">
+                        <img src="images/георгина.webp" alt="Георгина" class="flower-image">
+                        <h3 class="flower-name">Георгина</h3>
+                    </a>
+                </div>
+                <div class="flower-card" id="narciss">
+                    <a href="flowers/нарцисс.html#narciss" class="flower-link">
+                        <img src="images/нарцисс.webp" alt="Нарцисс" class="flower-image">
+                        <h3 class="flower-name">Нарцисс</h3>
+                    </a>
+                </div>
+                <div class="flower-card" id="iris">
+                    <a href="flowers/ирис.html#iris" class="flower-link">
+                        <img src="images/ирис.webp" alt="Ирис" class="flower-image">
+                        <h3 class="flower-name">Ирис</h3>
+                    </a>
+                </div>
+
+                <div class="flower-card" id="rose">
+                    <a href="flowers/роза.html#rose" class="flower-link">
+                        <img src="images/роза.webp" alt="Роза" class="flower-image">
+                        <h3 class="flower-name">Роза</h3>
+                    </a>
+                </div>
+                <div class="flower-card" id="pion">
+                    <a href="flowers/пион.html#pion" class="flower-link">
+                        <img src="images/пион.webp" alt="Пион" class="flower-image">
+                        <h3 class="flower-name">Пион</h3>
+                    </a>
+                </div>
+                <div class="flower-card" id="tulpan">
+                    <a href="flowers/тюльпан.html#tulpan" class="flower-link">
+                        <img src="images/тюльпан.webp" alt="Тюльпан" class="flower-image">
+                        <h3 class="flower-name">Тюльпан</h3>
+                    </a>
+                </div>
+                <div class="flower-card" id="siren">
+                    <a href="flowers/сирень.html#siren" class="flower-link">
+                        <img src="images/сирень.webp" alt="Сирень" class="flower-image">
+                        <h3 class="flower-name">Сирень</h3>
+                    </a>
+                </div>
+
+                <div class="flower-card" id="gvozdika">
+                    <a href="flowers/гвоздика.html#gvozdika" class="flower-link">
+                        <img src="images/гвоздика.webp" alt="Гвоздика" class="flower-image">
+                        <h3 class="flower-name">Гвоздика</h3>
+                    </a>
+                </div>
+                <div class="flower-card" id="klematis">
+                    <a href="flowers/клематис.html#klematis" class="flower-link">
+                        <img src="images/клематис.webp" alt="Клематис" class="flower-image">
+                        <h3 class="flower-name">Клематис</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="homework-section">
+        <div class="container">
+            <h2 class="section-title">Домашние задания</h2>
+            <div class="homework-list">
+                <a href="дз/рисунок/page1.html" class="homework-link">ДЗ 1</a>
+                <a href="дз/ролик/page2.html" class="homework-link">ДЗ 2</a>
+                <a href="дз/задание/задание.html" class="homework-link">ДЗ 3</a>
+                <a href="дз/тест/тест.html" class="homework-link">ДЗ 4</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer" id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>О сайте</h3>
+                    <p>Энциклопедия цветов - это проект, посвященный красоте и разнообразию цветочного мира.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Об авторе</h3>
+                    <p>Дарья Рогожина - студентка прикладной информатики, гр 5130903/30301</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Email: info@flowers-encyclopedia.ru</p>
+                    <p>Телефон: +7 (999) 000-00-00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Энциклопедия цветов.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
