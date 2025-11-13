@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Расчет землекопов. Рогожина</title>
+    <link rel="stylesheet" href="задание.css">
+</head>
+<body>
+    <!-- Канава 1 -->
+    <div class="trench">
+        <h3>Канава 1</h3>
+        <input type="number" id="length1" value="10" min="1">
+        <div>
+            <input type="checkbox" id="mechanized1">
+            <label>Механизированная бригада</label>
+        </div>
+    </div>
+
+    <!-- Канава 2 -->
+    <div class="trench">
+        <h3>Канава 2</h3>
+        <input type="number" id="length2" value="10" min="1">
+        <div>
+            <input type="checkbox" id="mechanized2">
+            <label>Механизированная бригада</label>
+        </div>
+    </div>
+
+    <!-- Канава 3 -->
+    <div class="trench">
+        <h3>Канава 3</h3>
+        <input type="number" id="length3" value="10" min="1">
+        <div>
+            <input type="checkbox" id="mechanized3">
+            <label>Механизированная бригада</label>
+        </div>
+    </div>
+
+    <button id="calculate">Рассчитать</button>
+    
+    <div id="result1" class="result"></div>
+    <div id="result2" class="result"></div>
+    <div id="result3" class="result"></div>
+
+    <script src="задание.js"></script>
+</body>
+</html>
