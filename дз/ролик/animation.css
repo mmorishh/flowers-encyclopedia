@@ -1,0 +1,242 @@
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2c3e50;
+    font-family: Arial, sans-serif;
+}
+
+/* Скрытый чекбокс для клика */
+.container-trigger {
+    display: none;
+}
+
+.container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.flex-scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+/* верхняя часть */
+.sky-section {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3% 5% 0 5%;
+}
+
+.cloud {
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.cloud1 {
+    width: 40%;
+    animation: cloudMoveRight 8s linear infinite;
+}
+
+.cloud2 {
+    width: 38%; 
+    animation: cloudMoveLeft 10s linear infinite;
+}
+
+.cloud1,
+.cloud2 {
+    height: auto;
+    max-height: 70%; 
+}
+
+/* центр */
+.center-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.caption-rest {
+    opacity: 0;
+}
+
+.caption-done {
+    opacity: 0;
+    top: 8%; 
+    left: 3%;
+    transform: rotate(-45deg);
+    font-size: 10px;
+}
+
+/* нижняя часть */
+.ground-section {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 5% 3% 5%; 
+    position: relative;
+}
+
+.tree-container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.tree {
+    width: 65%; 
+    height: auto;
+    max-height: 95%; 
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.fox-container {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 35%; 
+}
+
+.fox {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.5s ease;
+}
+
+.fox1 {
+    opacity: 1;
+}
+
+.fox2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+/* анимация*/
+
+@keyframes cloudMoveRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(40%); } 
+    100% { transform: translateX(80%); }
+}
+
+@keyframes cloudMoveLeft {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-40%); } 
+    100% { transform: translateX(-80%); }
+}
+
+@keyframes foxRun {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    20% {
+        transform: translate(-12%, -8%) scale(0.9);
+    }
+    40% {
+        transform: translate(24%, -16%) scale(0.8);
+    }
+    60% {
+        transform: translate(-36%, -24%) scale(0.7);
+    }
+    80% {
+        transform: translate(36%, -32%) scale(0.6);
+    }
+    100% {
+        transform: translate(-42%, -42%) scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes containerShake {
+    0% { transform: translateX(0) translateY(0); }
+    20% { transform: translateX(-3px) translateY(-2px); }
+    40% { transform: translateX(3px) translateY(2px); }
+    60% { transform: translateX(-2px) translateY(-1px); }
+    80% { transform: translateX(2px) translateY(1px); }
+    100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes treeSwing {
+    0% { transform: rotate(0deg) translateY(0); }
+    25% { transform: rotate(3deg) translateY(-2px); }
+    75% { transform: rotate(-3deg) translateY(-1px); }
+    100% { transform: rotate(0deg) translateY(0); }
+}
+
+/* триггеры */
+
+.container-label:hover .cloud {
+    opacity: 1;
+}
+
+.container-label:hover .caption-rest {
+    opacity: 1;
+}
+
+.tree:hover {
+    animation: treeSwing 1s ease-in-out infinite;
+}
+
+.container-trigger:checked ~ .container .cloud {
+    opacity: 1;
+}
+
+.container-trigger:checked ~ .container .caption-rest {
+    opacity: 0 !important;
+}
+
+.container-trigger:checked ~ .container .caption-done {
+    opacity: 1 !important;
+    transform: rotate(-45deg) scale(1.1);
+}
+
+.container-trigger:checked ~ .container .fox1 {
+    opacity: 0 !important;
+}
+
+.container-trigger:checked ~ .container .fox2 {
+    opacity: 1 !important;
+    animation: foxRun 2s ease-in-out forwards !important;
+}
+
+.container-trigger:checked ~ .container {
+    animation: containerShake 0.8s ease-in-out 2.1s !important;
+}
